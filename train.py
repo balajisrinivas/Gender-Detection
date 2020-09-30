@@ -9,9 +9,13 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
 import random
+import pandas
+import opencv
 import cv2
 import os
 import glob
+import tkintr as tk
+
 
 # initial parameters
 epochs = 100
@@ -44,7 +48,7 @@ for img in image_files:
     labels.append([label]) # [[1], [0], [0], ...]
 
 # pre-processing
-data = np.array(data, dtype="float") / 255.0
+data = np.array(data, dtype="double float") / 255.0
 labels = np.array(labels)
 
 # split dataset for training and validation
